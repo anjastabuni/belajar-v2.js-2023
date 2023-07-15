@@ -9,3 +9,5 @@
     ✅ Menagani Input Data dari User
     ✅ Mengenal Lifecyle Hooks VueJS
     ✅ Mengenal Event dan Method di dalam VueJS
+
+[Demo hasil](https://anjastabuni.github.io/belajar1-v2.js-2023/api/)
