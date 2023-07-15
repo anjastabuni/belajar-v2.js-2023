@@ -8,6 +8,12 @@
   </head>
   <body>
     <div class="container my-5" id="app">
+      <nav class="navbar navbar-light bg-light">
+        <div class="navbar-text mx-auto">
+          <b>card: </b>
+          <span class="badge rounded-pill text-bg-success">{{ cart.length}}</span>
+        </div>
+      </nav>
       <div class="form-inline mr-auto my-2">
         <label for="" class="font-weight-bold mr-2">Max</label>
         <input type="number" class="form-control w-25" v-model="maximum" />
@@ -15,13 +21,17 @@
       <input type="range" class="form-range" min="0" max="200" v-model="maximum" />
       <div class="row d-flex mb-3 align-items-center" v-for="item in products">
         <div v-if="item.price <= Number(maximum)">
+        </div>
+        <div class="col-1">
+          <button class="btn btn-info" v-on:click="addItem(item)">+</button>
+        </div>
           <div class="col-sm-4">
             <img class="img-fluid d-block" v-bind:src="item.image" :alt="item.name" />
           </div>
           <div class="col">
             <h2 class="text-info">{{ item.name }}</h2>
             <p class="mb-0">{{ item.description }}</p>
-            <div class="h5 float-right">Rp. {{ item.price }}</div>
+            <div class="h5 pt-2">Rp. {{ item.price }}</div>
           </div>
         </div>
       </div>
